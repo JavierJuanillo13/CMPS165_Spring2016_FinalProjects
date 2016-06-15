@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Whats in your coffee?</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+        
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="static/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="static/favicon/favicon-16x16.png" sizes="16x16" />
+        
+        <!-- Load CSS-->
+        <link rel="stylesheet" type="text/css" href="css/coffee.css">
+        <!-- Load Font -->
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        
+        <!-- Load jQuery cdn -->
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+        
+        <!-- Load C3 cdn -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+        
+        <!-- Load C3 css -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css">
+        
+        <!-- Load D3 cdn -->
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        
+        <!-- Load Bootstrap cdn -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" charset="utf-8"></script>
+        
+        <!-- Load Bootstrap css -->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+        <!-- Custom Scrollbar CSS-->
+        <link rel="stylesheet" href="libraries/jquery.mCustomScrollbar.css" />
+        
+        <!-- Custom Scrollbar JS-->
+        <script src="libraries/jquery.mCustomScrollbar.js"></script>
+        
+        <!-- qTip import (ToolTips) -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
+        
+        <!-- SweetAlert -->
+        <script src="libraries/sweetalert.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="libraries/sweetalert.css">
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top mainTitle">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <p class="titleText">WHAT'S IN YOUR CUP?</p>
+              <p class="infoButton">?</p>
+              <p class="titleDetail">Make your cup <span id="swap"></span>!</p>
+              
+            </div>
+          </div>
+        </nav>
+        <div class="container main">
+            <div class="col-sm-6 modSide mCustomScrollbar" data-mcs-theme="minimal">
+                
+                <!--Bean Row-->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="titleLabel">PICK A BEAN AND ROAST</p>
+                        <p class="titleDetail">A variety of flavors and a good amount of caffeine come out of Arabica coffee, but if you want a strong and bitter coffee, Robusta is the bean you're looking for. Your roast will affect the flavor and caffeine content as well, typically following a trend of with a darker roast, there comes slightly less caffeine, and a darker flavor.</p>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <!-- Arabica bean -->
+                    <div class="col-sm-4">
+                        <img src="static/img/beans/arabica.svg"
+                             id="Arabica"
+                             class="bean"
+                             data="Arabica">
+                        <p class="itemLabel">ARABICA</p>
+                    </div>
+                    
+                    <!-- Robusta bean -->
+                    <div class="col-sm-4">
+                        <img src="static/img/beans/coffee-bean.svg"
+                             id="Robusta"
+                             class="bean"
+                             data="Robusta">
+                             <p class="itemLabel">ROBUSTA</p>
+                    </div>
+                </div>
+                
+                <!-- Roast Row-->
+                <div class="mods row content">
+                    
+                    <!-- Light roast -->
+                    <div class="col-sm-4">
+                        <button type="button" 
+                                class="btn btn-light roast"
+                                id="Light"
+                                data="Light">LIGHT
+                        </button>
+                    </div>
+                    
+                    <!-- Medium roast -->
+                    <div class="col-sm-4">
+                        <button type="button"
+                                class="btn btn-medium roast"
+                                id="Medium"
+                                data="Medium">MEDIUM
+                        </button>
+                    </div>
+                    
+                    <!-- Dark roast -->
+                    <div class="col-sm-4">
+                        <button type="button"
+                                class="btn btn-dark roast"
+                                id="Dark"
+                                data="Dark">DARK
+                        </button>
+                    </div>
+                    
+                </div>
+                
+                <!-- Brewing Methods Row-->
+                <div class="row content">
+                    <div class="col-sm-12">
+                        <p class=titleLabel>CHOOSE YOUR BREW</p>
+                        <p class="titleDetail">This is but a small selection of all the ways you could brew your coffee. Every one produces a different flavor due to different factors including, but not limited to: water temperature, pressure, coffee-to-water ratio, and brew time.</p>
+                    </div>
+                    <!-- Chemex method -->
+                    <div class="col-sm-4">
+                        <img src="static/img/methods/chemex.svg"
+                             class="chemex method"
+                             id="Chemex"
+                             data="Chemex">
+                         <p class="itemLabel">CHEMEX</p>
+                    </div>
+                    
+                    <!-- Siphon method -->
+                    <div class="col-sm-4">
+                        <img src="static/img/methods/siphen.png"
+                             class="siphen method"
+                             id="Siphon"
+                             data="Siphon">
+                         <p class="itemLabel">SIPHON</p>
+                    </div>
+                    
+                    <!-- Cold Brew method -->
+                    <div class="col-sm-4">
+                        <img src="static/img/methods/cold%20brew.png"
+                             class="coldbrew image method"
+                             id="ColdBrew"
+                             data="ColdBrew">
+                         <p class="itemLabel">COLD BREW</p>
+                    </div>
+                    
+                    <div class="col-sm-2"></div>
+                    
+                    <!-- Espresso method -->
+                    <div class="col-sm-3">
+                        <img src="static/img/methods/espresso-machine.svg"
+                             class="image method"
+                             id="Espresso"
+                             data="Espresso">
+                         <p class="itemLabel">ESPRESSO</p>
+                        
+                    </div>
+                    
+                    <div class="col-sm-2"></div>
+                    
+                    <!-- Turkish method -->
+                    <div class="col-sm-3">
+                        <img src="static/img/methods/cezve.svg"
+                             class="turkish image method"
+                             id="Turkish"
+                             data="Turkish">
+                         <p class="itemLabel">TURKISH</p>
+                        
+                    </div>
+                    
+                    <div class="col-sm-2"></div>
+                </div>
+                
+                <!-- Modifiers Section-->
+                <div class="row content">
+                    <p class="titleLabel">SOME MILK AND SUGAR WITH THAT?</p>
+                    <p class="titleDetail">The most prudent coffee lovers will tell you that the best coffee doesn't need anything else! However, the taste of your coffee is always up to you in the end. Some people like it sweet, others like it softened up a bit with milk. Choose whatever you like or nothing at all!</p>
+                    <!-- Cow milk -->
+                    <div class="col-sm-4">
+                        <img src="static/img/milks/cowmilk.svg"
+                             class="milk"
+                             id="CowMilk"
+                             data="CowMilk">
+                        <p class="itemLabel">MILK</p>
+                    </div>
+                    
+                    <!-- Almond milk -->
+                    <div class="col-sm-4">
+                        <img src="static/img/milks/almondmilk.png"
+                             class="milk"
+                             id="AlmondMilk"
+                             data="AlmondMilk">
+                        <p class="itemLabel">ALMOND MILK</p>
+                    </div>
+                    
+                    <!-- Soy milk -->
+                    <div class="col-sm-4">
+                        <img src="static/img/milks/soymilk.svg"
+                             class="milk"
+                             id="SoyMilk"
+                             data="SoyMilk">
+                         <p class="itemLabel">SOY MILK</p>
+                    </div>
+                
+                    <!-- Sugar -->
+                    <div class="col-sm-4">
+                        <img src="static/img/sweeteners/sachet-sugar.svg"
+                             class="sweetener"
+                             id="Sugar"
+                             data="Sugar">
+                        <p class="itemLabel">SUGAR</p>
+                    </div>
+                    
+                    <!-- Honey -->
+                    <div class="col-sm-4">
+                        <img src="static/img/sweeteners/honeypot.svg"
+                             class="sweetener"
+                             id="Honey"
+                             data="Honey">
+                         <p class="itemLabel">HONEY</p>
+                    </div>
+                    
+                    <!-- Flavor Syrup -->
+                    <div class="col-sm-4">
+                        <img src="static/img/sweeteners/syrup.svg"
+                             class="sweetener"
+                             id="Syrup"
+                             data="Syrup">
+                        <p class="itemLabel">SYRUP</p>
+                    </div>
+                
+                    
+                </div>
+                
+            </div>
+            <!-- End Modifiers Side-->
+            
+            <!-- Begin Results Side-->
+            <div class="col-sm-6 resultSide">
+                <div class="resultTitle">
+                    <p>YOUR COFFEE</p>
+                    
+                </div>
+                <p class="titleDetail">Below you'll discover the changes in serving sizes, caffeine content, calories, and price per serving based on what you choose on the left! You can also choose from a few pre-made drinks from the saved-coffee list below to load into a cup or even your save own cup.</p>
+                <!-- Main Cup Side -->
+                <div class="col-sm-6">
+                    <!-- Orig Graphs -->
+                    <div class="row graphs">
+                        
+                    
+                        <div class="col-sm-4">
+                            <div id="caf0"></div>
+                            <p class="graphData"></p>
+                            <p class="graphTitle">CAFFEINE</p>
+                            <p class="graphDetail">(per serving)</p>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div id="cal0"></div>
+                            <p class="graphData"></p>
+                            <p class="graphTitle">CALORIES</p>
+                            <p class="graphDetail">(per serving)</p>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div id="price0"></div>
+                            <p class="graphData"></p>
+                            <p class="graphTitle">PRICE</p>
+                            <p class="graphDetail">($USD per cup)</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Coffee Cup-->
+                    <div class="row">
+                        <div class="col-sm-12 cupHolder">
+                            <div class="cupHolder">
+                                <img src="static/img/cups/coldbrewIce.svg"
+                                class="mainIce">
+                                <img src=""
+                                    class="mainCup"
+                                    id="mainCup"
+                                    data="mainCup">
+                                <img src="static/img/cups/siphonFill.svg"
+                                    class="mainFill">
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <!-- Compare Cup Side -->
+                <div class="col-sm-6 compareCupSide">
+                    <!-- New Graph -->
+                    <div class="row graphs">
+                    
+                        <div class="col-sm-4">
+                            <div id="caf1"></div>
+                            <p class="graphData"></p>
+                            <p class="graphTitle">CAFFEINE</p>
+                            <p class="graphDetail">(per serving)</p>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div id="cal1"></div>
+                            <p class="graphData"></p>
+                            <p class="graphTitle">CALORIES</p>
+                            <p class="graphDetail">(per serving)</p>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div id="price1"></div>
+                            <p class="graphData"></p>
+                            <p class="graphTitle">PRICE</p>
+                            <p class="graphDetail">($USD per cup)</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Coffee Cup-->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="cupHolder">
+                                <img src="static/img/cups/coldbrewIce.svg"
+                                class="compareIce">
+                                <img src=""
+                                    class="compareCup"
+                                     id="compareCup"
+                                     data="compareCup"
+                                     >
+                                <img src=""
+                                    class="compareFill">    
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+                
+
+                
+                
+                <!-- Name and extra info-->
+                <div class="row"></div>
+                
+                <!-- Save coffee-->
+                <div class="buttonRow row">
+                    
+                    <!-- Save coffee button -->
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-save save">Save this cup!</button>
+                    </div>
+                    
+                    <!-- Drop down of saved coffee objects -->
+                    <div class="col-sm-3">
+                        <div class="dropdown">
+                            <button class="btn btn-saved" type="button" data-toggle="dropdown">Saved Coffee
+                            <span class="caret"></span></button>
+                            <ul id="dropList" class="dropdown-menu dropList"></ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+                
+                <!-- Name and extra info-->
+                <div class="row"></div>
+
+                
+            </div> <!-- End Results Side-->
+            
+            
+        </div> <!-- End container -->
+        
+        <div class="tipHolder"></div>
+        
+        <script>
+            $(function(){
+              $(".tipHolder").load("static/html/tipContent.html"); 
+            });
+            
+        </script>
+        
+        <!-- Load json data -->
+        <script src="js/coffeedata.json"></script>
+        
+        <!-- Custom Tooltips JS file-->
+        <script src="js/tooltips.js"></script>
+                
+        <!-- Donut Chart -->
+        <script src="js/donut.js"></script>
+        
+        <!-- Load main js file -->
+        <script src="js/coffee.js"></script>
+        
+        <!-- Custom Animations -->
+        <script type="text/javascript" src="js/animations.js"></script>
+        
+    </body>
+</html>

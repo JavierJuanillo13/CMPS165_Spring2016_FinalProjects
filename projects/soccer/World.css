@@ -1,0 +1,236 @@
+#area1 {
+    text-align:center;  
+    background-color:seashell;
+}
+#css{
+    text-align: left;
+}
+td, th {
+    overflow:hidden; 
+    white-space:nowrap;
+    padding: 1px 6px;
+    text-align: center;
+}
+
+table {table-layout:fixed}
+
+td.logo{
+    background-color: lightgoldenrodyellow;
+}
+h2{
+    font-size: 15px;
+    background-color: aliceblue;
+}        
+          
+    #subDiv1 input {
+    background:url(./2014.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    float: left;    
+}      
+    #subDiv2 input{
+    background:url(./2010.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;    
+}         
+#subDiv3 input {
+    background:url(./2006.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+          
+#subDiv4 input {
+    background:url(./2002.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+}   
+          
+#subDiv5 input {
+    background:url(./1998.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+}          
+
+#subDiv6 input {
+    background:url(./1994.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+}  
+          
+          
+#subDiv7 input {
+    background:url(./1990.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+          
+#subDiv8 input {
+    background:url(./1986.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+
+#subDiv9 input {
+    background:url(./1982.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+
+#subDiv10 input {
+    background:url(./1978.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+
+#subDiv11 input {
+    background:url(./1974.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+}
+
+#subDiv12 input {
+    background:url(./1970.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+
+#subDiv13 input {
+    background:url(./1966.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+
+#subDiv14 input {
+    background:url(./1962.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+}
+
+#subDiv15 input {
+    background:url(./1958.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+
+#subDiv16 input {
+    background:url(./1954.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+
+#subDiv17 input {
+    background:url(./1950.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+
+
+#subDiv18 input {
+    background:url(./1938.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+}
+
+#subDiv19 input {
+    background:url(./1934.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+#subDiv20 input {
+    background:url(./1930.png) no-repeat;
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+
+    .node circle {
+	  fill: #fff;
+	  stroke: steelblue;
+	  stroke-width: 3px;
+	}
+          
+    .node text { font: 12px sans-serif; }
+    path .link {width: 90px;}
+	.link {
+	  fill: none;
+	  stroke: #ccc;
+	  stroke-width: 2px;
+	}
+	
+        h1{
+            text-align: center
+        }  
+
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    width: 180px;
+    height: 100px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+  }

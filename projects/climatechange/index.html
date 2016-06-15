@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ <!-- Meta Tag -->
+    <meta charset="utf-8">
+    <title>Climate Change Contributors</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="climatechangestylesheet.css">
+    <!-- D3.js Source -->
+    <script type= "text/javascript" src="http://d3js.org/d3.v3.min.js"></script> 
+
+    <h1 style = "text-align:center; color:steelblue"><bold>GDP vs Electric Power Consumption</bold></h1>
+    <!-- Your D3.js code for making a Scatterplot -->
+    <style>    
+         div.tooltip {	
+            position: absolute;			
+            text-align: center;			
+            width: auto;					
+            height: auto;					
+            padding: 6px;				
+            font: 12px sans-serif;		
+            background: lightgrey;	
+            border: 0px;		
+            border-radius: 10px;
+            opacity: 0.4;
+            pointer-events: none;			
+        }
+    </style>
+    </head>
+    <font size="2">
+GDP per capita has a positive correlation with Electric Power Consumption. We can see that the countries with a higher GDP per capita also consume more electric power.
+    </font>
+    <!-- give area to display chart visual -->
+    <p id="chart"></p>
+<!--  
+<div id="outer">
+    <div class="inner">
+<div id="option1">
+    <input name="updateButton1" 
+           type="button" 
+           value="Electric Power Consumption" 
+           onclick="updateData1()" />
+</div>
+</div>
+    <div class="inner">
+<div id="option2">
+    <input name="updateButton2" 
+           type="button" 
+           value="Fossil Fuel Energy Consumption" 
+           onclick="updateData2()" />
+</div>
+</div>
+    <div class="inner">
+<div id="option3">
+    <input name="updateButton3" 
+           type="button" 
+           value="CO2 Emissions" 
+           onclick="updateData3()" />
+</div>
+</div>
+</div>
+    -->
+<div class="pagetext"> 
+    <font size="1.5">
+ Created By: Curtis Liew, Cesar Kyle Casil, and John Ta in collaboration with Suresh K. Lodha and Karthik <br>
+ Created for CMPS 165: Data Programming for Visualization, Spring 2016 <br>
+
+    <a href="https://github.com/ccasil/ClimateChangeContributors">Climate Change Contributors Github</a>
+    </font>
+    <font size="1">
+    <body>   
+        <script type="text/javascript" src="climatechangescatterplot.js"></script> 
+         <h4>Files Submitted:</h4>
+            <ul>
+            <li>index.html</li>
+            <li>climatechangestylesheet.css</li>
+            <li>climatechangescatterplot.js</li>
+            <li>electricpowerconsumptionpercapita.csv</li>
+            <li>fossilfuelenergyconsumption.csv</li>
+            <li>co2emissions.csv</li>
+            <li>nations.json</li>
+            </ul>
+            <h4>References:</h4>
+        <ul><b>Data:</b>
+                <li><a href="http://www.noaa.gov/">National Oceanic and Atmospheric Administration (NOAA)</a></li>
+                <li><a href="http://www.worldbank.org/">The World Bank Group</a></li>
+                </ul>
+        <ul><b>Visual:</b>
+                <li><a href="https://bost.ocks.org/mike/nations/">The Wealth & Health of Nations</a></li>
+                <li><a href="http://bl.ocks.org/d3noob/7030f35b72de721622b8">Update d3.js data with button press</a></li>
+            </ul>
+    </body>
+    </font>
+</div>
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Final Project</title>
+  
+<!--<div class="myButton"><INPUT type="submit" name="" value="" onclick="updateData2014()">
+<div class="myButton1"><INPUT type="submit" name="" value="" onclick="updateData2010()"></div>    
+--> 
+<div id="navBar">
+    <div id="subDiv1"><INPUT type="submit" name="" value="" onclick="updateData2014()"></div>
+    <div id="subDiv2"><INPUT type="submit" name="" value="" onclick="updateData2010()"></div>
+    <div id="subDiv3"><INPUT type="submit" name="" value="" onclick="updateData2006()"></div>
+    <div id="subDiv4"><INPUT type="submit" name="" value="" onclick="updateData2002()"></div>
+    <div id="subDiv5"><INPUT type="submit" name="" value="" onclick="updateData1998()"></div>
+    <div id="subDiv6"><INPUT type="submit" name="" value="" onclick="updateData1994()"></div>
+    <div id="subDiv7"><INPUT type="submit" name="" value="" onclick="updateData1990()"></div>
+    <div id="subDiv8"><INPUT type="submit" name="" value="" onclick="updateData1986()"></div>    
+</div>   
+    
+<!--
+    <div id="option">
+    <button id="option0"> 
+     <input name="" 
+           type="button" 
+           value="" 
+           onclick="updateData2014()" /> </button>
+ 
+          <button id="option1">
+    <input name="updateButton2" 
+           type="button" 
+           value="Go to 2010" 
+           onclick="updateData2010()" />
+           </button>
+      
+       
+          <button id="option2">
+    <input name="updateButton3" 
+           type="button" 
+           value="Go to 2006" 
+           onclick="updateData2006()" /> </button>
+    
+    <button id="option3">
+    <input name="updateButton4" 
+           type="button" 
+           value="Go to 2002" 
+           onclick="updateData2002()" /> </button>
+    
+    <button id="option4">
+    <input name="updateButton5" 
+           type="button" 
+           value="Go to 1998" 
+           onclick="updateData1998()" /> </button>
+    
+    <button id="option5">
+    <input name="updateButton6" 
+           type="button" 
+           value="Go to 1994" 
+           onclick="updateData1994()" /> </button>
+    
+    <button id="option6">
+    <input name="updateButton7" 
+           type="button" 
+           value="Go to 1990" 
+           onclick="updateData1990()" /> </button>
+    
+    <button id="option7">
+    <input name="updateButton8" 
+           type="button" 
+           value="Go to 1986" 
+           onclick="updateData1986()" /> </button>
+    -->
+    
+      </div>
+          <div id="area1"></div>
+        <div id="tree1"></div>
+      
+      <style>
+      
+    td, th {
+    overflow:hidden; 
+    white-space:nowrap;
+    padding: 1px 6px;
+    text-align: center;
+}
+
+table {table-layout:fixed}
+	
+    .node circle {
+	  fill: #fff;
+	  stroke: steelblue;
+	  stroke-width: 3px;
+	}
+    
+#navBar {
+    width: 85%;
+    height: px;
+    margin-left: 3%;
+    margin-right: auto;
+    margin-top: 2%;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #008040;
+    overflow: hidden;
+} 
+        
+          
+    #subDiv1 input {
+    background:url(/logos/2014.png) no-repeat;
+    cursor:pointer;
+    width: 130px;
+    height: 100px;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    float: left;    
+}      
+    #subDiv2 input{
+    background:url(/logos/2010.png) no-repeat;
+    cursor:pointer;
+    width: 130px;
+    height: 100px;
+    border: none;
+    float: left;    
+}         
+#subDiv3 input {
+    background:url(/logos/2006.png) no-repeat;
+    cursor:pointer;
+    width: 130px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+          
+#subDiv4 input {
+    background:url(/logos/2002.png) no-repeat;
+    cursor:pointer;
+    width: 130px;
+    height: 100px;
+    border: none;
+    float: left;
+}   
+          
+#subDiv5 input {
+    background:url(/logos/1998.png) no-repeat;
+    cursor:pointer;
+    width: 130px;
+    height: 100px;
+    border: none;
+    float: left;
+}          
+
+#subDiv6 input {
+    background:url(/logos/1994.png) no-repeat;
+    cursor:pointer;
+    width: 130px;
+    height: 100px;
+    border: none;
+    float: left;
+}  
+          
+          
+#subDiv7 input {
+    background:url(/logos/1990.png) no-repeat;
+    cursor:pointer;
+    width: 130px;
+    height: 100px;
+    border: none;
+    float: left;
+} 
+          
+#subDiv8 input {
+    background:url(/logos/1986.png) no-repeat;
+    cursor:pointer;
+    width: 200px;
+    height: 100px;
+    border: none;
+}                    
+          
+    .node text { font: 12px sans-serif; }
+
+	.link {
+	  fill: none;
+	  stroke: #ccc;
+	  stroke-width: 2px;
+	}
+	
+        h1{
+            text-align: center
+        }  
+        
+      
+    </style>
+
+  </head>
+
+  <body>
+
+<!-- load the d3.js library -->	
+<script src="http://d3js.org/d3.v3.min.js"></script>
+	
+<script>
+
+var margin = {top: 30, right: 20, bottom: 80, left: 100},
+    width = 1000 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
+
+var canvas = d3.select("#area1")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+        .attr("transform", 
+              "translate(" + margin.left + "," + margin.top + ")");
+d3.csv("Champions.csv", function(data){
+    data.columns = [{
+      head: 'Year',
+      cl: 'year',
+      html: function(d) {
+        return d.Year;
+      }
+    }, {
+      head: 'Champion',
+      cl: 'champs',
+      html: function(d) {
+        return d.Champion;
+      }
+    }, {
+      head : 'Golden Ball Winner',
+      cl: 'best player',
+      html: function(d){
+        var returner = d.GoldenBall + ".jpg";
+        console.log(returner);
+        return "<img src=" + returner + ">";
+      }
+    },
+    {
+        head: 'Golden Boot Winner',
+        cl: 'goal',
+        html: function(d){
+            var returner = d.GoldenBoot + ".jpg";
+            // return d.GoldenBoot;
+            return "<img src=" + returner + ">";
+        }
+    },
+    {
+        head: 'Golden Glove',
+        cl: 'saves',
+        html: function(d){
+            var returner = d.GoldenGlove + ".jpg";
+            return "<img src=" + returner + ">";
+            //return d.GoldenGlove; // get image and return image
+        }
+        
+    }];
+    var table = canvas.append("foreignObject")
+      .attr("width", width)
+      .attr("height", height)
+      .append("xhtml:body")
+
+    table.append("table")
+      // append header row
+    table.append('thead').append('tr')
+      .selectAll('th')
+      .data(data.columns).enter()
+      .append('th')
+      .attr('class', function(d) {
+        return d.cl;
+      })
+      .text(function(d) {
+        return d.head;
+      });
+
+    // append body rows
+    table.append('tbody')
+      .selectAll('tr')
+      .data(data).enter()
+      .append('tr')
+      .selectAll('td')
+      .data(function(row, i) {
+        // evaluate column objects against the current row
+        return data.columns.map(function(c) {
+          var cell = {};
+          d3.keys(c).forEach(function(k) {
+            cell[k] = typeof c[k] == 'function' ? c[k](row, i) : c[k];
+          });
+          return cell;
+        });
+      }).enter()
+      .append('td')
+      .html(function(d) {
+        return d.html;
+      })
+      .attr('class', function(d) {
+        return d.cl;
+      });
+});
+
+
+    
+
+
+    
+    
+// Make tree layout    
+	
+var i = 0;
+
+var tree = d3.layout.tree()
+	.size([height, width]);
+
+var diagonal = d3.svg.diagonal()
+	.projection(function(d) { return [d.y, d.x]; });
+
+var svg = d3.select("#tree1").append("svg")
+	.attr("width", width + margin.right + margin.left)
+	.attr("height", height + margin.top + margin.bottom)
+  .append("g")
+	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+
+// Updates data dynmaically to 2014 tournament    
+function updateData2014() {
+    
+d3.csv("2014_Tree.csv", function(error, data) {
+svg.selectAll("*").remove(); 
+// *********** Convert flat data into a nice tree ***************
+// create a name: node map
+var dataMap = data.reduce(function(map, node) {
+	map[node.name] = node;
+	return map;
+}, {});
+
+// create the tree array
+var treeData = [];
+data.forEach(function(node) {
+	// add to parent
+	var parent = dataMap[node.parent];
+	if (parent) {
+		// create child array if it doesn't exist
+		(parent.children || (parent.children = []))
+			// add node to child array
+			.push(node);
+	} else {
+		// parent is null or missing
+		treeData.push(node);
+	}
+});
+
+  root = treeData[0];
+  update(root);
+});
+}
+function update(source) {
+
+  // Compute the new tree layout.
+  var nodes = tree.nodes(root).reverse(),
+	  links = tree.links(nodes);
+
+  // Normalize for fixed-depth.
+  nodes.forEach(function(d) { d.y = d.depth * 180; });
+
+  // Declare the nodesâ€¦
+  var node = svg.selectAll("g.node")
+	  .data(nodes, function(d) { return d.id || (d.id = ++i); });
+
+  // Enter the nodes.
+  var nodeEnter = node.enter().append("g")
+	  .attr("class", "node")
+	  .attr("transform", function(d) { 
+		  return "translate(" + d.y + "," + d.x + ")"; });
+
+  nodeEnter.append("circle")
+	  .attr("r", 10)
+	  .style("fill", "#fff");
+
+  nodeEnter.append("text")
+	  .attr("x", function(d) { 
+		  return d.children || d._children ? -13 : 13; })
+	  .attr("dy", ".35em")
+	  .attr("text-anchor", function(d) { 
+		  return d.children || d._children ? "end" : "start"; })
+	  .text(function(d) { return d.name; })
+	  .style("fill-opacity", 1);
+
+  // Declare the linksâ€¦
+  var link = svg.selectAll("path.link")
+	  .data(links, function(d) { return d.target.id; });
+
+  // Enter the links.
+  link.enter().insert("path", "g")
+	  .attr("class", "link")
+	  .attr("d", diagonal);
+    
+    }
+    
+    
+    
+// 2010 tourny
+    
+function updateData2010() {
+d3.csv("2010_Tree.csv", function(error, data) {
+svg.selectAll("*").remove();
+// *********** Convert flat data into a nice tree ***************
+// create a name: node map
+var dataMap = data.reduce(function(map, node) {
+	map[node.name] = node;
+	return map;
+}, {});
+
+// create the tree array
+var treeData = [];
+data.forEach(function(node) {
+	// add to parent
+	var parent = dataMap[node.parent];
+	if (parent) {
+		// create child array if it doesn't exist
+		(parent.children || (parent.children = []))
+			// add node to child array
+			.push(node);
+	} else {
+		// parent is null or missing
+		treeData.push(node);
+	}
+});
+
+  root = treeData[0];
+  update(root);
+});
+    
+    
+}    
+ 
+//2006
+    
+function updateData2006() {
+d3.csv("2006_Tree.csv", function(error, data) {
+svg.selectAll("*").remove();
+// *********** Convert flat data into a nice tree ***************
+// create a name: node map
+var dataMap = data.reduce(function(map, node) {
+	map[node.name] = node;
+	return map;
+}, {});
+
+// create the tree array
+var treeData = [];
+data.forEach(function(node) {
+	// add to parent
+	var parent = dataMap[node.parent];
+	if (parent) {
+		// create child array if it doesn't exist
+		(parent.children || (parent.children = []))
+			// add node to child array
+			.push(node);
+	} else {
+		// parent is null or missing
+		treeData.push(node);
+	}
+});
+
+  root = treeData[0];
+  update(root);
+});
+    
+    
+}       
+
+    
+//2002 tourny
+    
+//2006
+    
+function updateData2002() {
+d3.csv("2002_Tree.csv", function(error, data) {
+svg.selectAll("*").remove();
+// *********** Convert flat data into a nice tree ***************
+// create a name: node map
+var dataMap = data.reduce(function(map, node) {
+	map[node.name] = node;
+	return map;
+}, {});
+
+// create the tree array
+var treeData = [];
+data.forEach(function(node) {
+	// add to parent
+	var parent = dataMap[node.parent];
+	if (parent) {
+		// create child array if it doesn't exist
+		(parent.children || (parent.children = []))
+			// add node to child array
+			.push(node);
+	} else {
+		// parent is null or missing
+		treeData.push(node);
+	}
+});
+
+  root = treeData[0];
+  update(root);
+});
+    
+    
+}           
+
+//1998 touney
+    
+function updateData1998() {
+d3.csv("1998_Tree.csv", function(error, data) {
+svg.selectAll("*").remove();
+// *********** Convert flat data into a nice tree ***************
+// create a name: node map
+var dataMap = data.reduce(function(map, node) {
+	map[node.name] = node;
+	return map;
+}, {});
+
+// create the tree array
+var treeData = [];
+data.forEach(function(node) {
+	// add to parent
+	var parent = dataMap[node.parent];
+	if (parent) {
+		// create child array if it doesn't exist
+		(parent.children || (parent.children = []))
+			// add node to child array
+			.push(node);
+	} else {
+		// parent is null or missing
+		treeData.push(node);
+	}
+});
+
+  root = treeData[0];
+  update(root);
+});
+    
+    
+} 
+    
+//1994
+
+function updateData1994() {
+d3.csv("1994_Tree.csv", function(error, data) {
+svg.selectAll("*").remove();
+// *********** Convert flat data into a nice tree ***************
+// create a name: node map
+var dataMap = data.reduce(function(map, node) {
+	map[node.name] = node;
+	return map;
+}, {});
+
+// create the tree array
+var treeData = [];
+data.forEach(function(node) {
+	// add to parent
+	var parent = dataMap[node.parent];
+	if (parent) {
+		// create child array if it doesn't exist
+		(parent.children || (parent.children = []))
+			// add node to child array
+			.push(node);
+	} else {
+		// parent is null or missing
+		treeData.push(node);
+	}
+});
+
+  root = treeData[0];
+  update(root);
+});
+    
+    
+} 
+    
+//1990
+    
+function updateData1990() {
+d3.csv("1990_Tree.csv", function(error, data) {
+svg.selectAll("*").remove();
+// *********** Convert flat data into a nice tree ***************
+// create a name: node map
+var dataMap = data.reduce(function(map, node) {
+	map[node.name] = node;
+	return map;
+}, {});
+
+// create the tree array
+var treeData = [];
+data.forEach(function(node) {
+	// add to parent
+	var parent = dataMap[node.parent];
+	if (parent) {
+		// create child array if it doesn't exist
+		(parent.children || (parent.children = []))
+			// add node to child array
+			.push(node);
+	} else {
+		// parent is null or missing
+		treeData.push(node);
+	}
+});
+
+  root = treeData[0];
+  update(root);
+});
+    
+    
+}  
+    
+//1986
+    
+function updateData1986() {
+d3.csv("1986_Tree.csv", function(error, data) {
+svg.selectAll("*").remove();
+// *********** Convert flat data into a nice tree ***************
+// create a name: node map
+var dataMap = data.reduce(function(map, node) {
+	map[node.name] = node;
+	return map;
+}, {});
+
+// create the tree array
+var treeData = [];
+data.forEach(function(node) {
+	// add to parent
+	var parent = dataMap[node.parent];
+	if (parent) {
+		// create child array if it doesn't exist
+		(parent.children || (parent.children = []))
+			// add node to child array
+			.push(node);
+	} else {
+		// parent is null or missing
+		treeData.push(node);
+	}
+});
+
+  root = treeData[0];
+  update(root);
+});
+    
+    
+}               
+</script>
+	
+  </body>
+</html>

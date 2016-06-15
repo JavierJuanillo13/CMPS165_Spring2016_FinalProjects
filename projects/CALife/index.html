@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <Title> California's Quality of Life</Title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/caliStyle.css">
+    <link rel="stylesheet" href="stylesheets/spinner.css">
+    <link rel="stylesheet" href="stylesheets/toggleSwitch.css">
+    <!-- load jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!--buttonPresses Scripts!  -->
+    <script src="javascripts/buttonPresses.js"></script>
+</head>
+
+<body>
+    <h1><center><strong>California's Quality of Life</strong></center></h1>
+
+    <h5><center><p>There is a stark divide in the quality of life of Californians in which you can gauge one's quality of life based on which region of California they live in. <br> As you move inland, poverty levels increase in comparison to areas along the coast such as the Bay Area and Los Angeles. <br>As poverty rises, college enrollment and health coverage rates trend downward, with the lowest percentages found along the central valley and eastern border. </center></h5>
+
+
+    <div id="wrapper"  class="wrapper">
+        <div class="cssload-loader"></div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/colorbrewer.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <!-- Source https://github.com/emeeks/d3-svg-legend -->
+    <script src="javascripts/legend.min.js"></script>
+
+    <!--insert map script here..-->
+    <script src="javascripts/main.min.js"></script>
+    
+    <div align="center" style="margin-bottom:10px;">
+        <label class="toggler toggler--is-active" id="filt-css">Percentage</label>
+        <div class="toggle">
+            <input type="checkbox" id="switcher" class="check">
+            <b class="b switch"></b>
+        </div>
+        <label class="toggler" id="filt-javascript">Number</label>
+    </div>
+    
+    <!--toggleSwitch Scripts!  -->
+    <script src="javascripts/toggleSwitch.js"></script>
+
+    <center>
+        <div id="selector">
+            <section id="buttons" class="gradient">
+                <button id="button_education" type="button" value="false" onclick="activeEduButton();" style="background-color:#2196F3">Education</button>
+                <button id="button_health" type="button" value="false" onclick="activeHealthButton();" style="background-color:#4CAF50">Health Insurance</button>
+                <button id="button_poverty" type="button" value="false" onclick="activePovertyButton();" style="background-color:#673AB7">Poverty</button>
+            </section>
+        </div>
+    </center>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+        <div>
+                <form id="form" class="my-form">
+                    <fieldset>
+                    <legend>Address Tract Lookup:</legend>
+                    Street: <br><input type="text" name="street"><br>
+                    City: <br><input type="text" name="city"><br>
+                    Zip<em>(optional)</em>: <br><input type="text" name="zip"><br>
+                        <div><span id="errorText" style="color:red"></span></div>
+                    <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+        </div>
+    <table style="width:100%" id="table1">
+        <caption>Census tract comparison</caption>
+        <tr>
+            <th>Tract GeoID</th>
+            <th>County</th>
+            <th>Population</th>
+            <th>Total in College</th>
+            <th>% in College</th>
+            <th>Total insured</th>
+            <th>% insured</th>
+            <th>Total in Poverty</th>
+            <th>% in Poverty</th>
+        </tr>
+    </table>
+    <br>
+    <p1><em> <center>Created by Raul Moncayo, Jeffrey Guo, Timothy Ma, Richard Pham</center></em></p1>
+
+    <div>
+        <center></center>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <ul>CMPS 165: Data Programming for Visualization</ul>
+    <ul>In collaboration with:
+        <ol>Professor: Suresh Lodha</ol>
+        <ol>Teacher Assistance: Karthik</ol>
+    </ul>
+    <ul>UCSC: Spring 2016</ul>
+    <ul>Files Included:
+        <ol>
+            <li>index.html</li>
+            <li>main.js</li>
+            <li>main.min.js</li>
+            <li>legend.min.js</li>
+            <li>caTractsAndCounties.json</li>
+            <li>caEducationBound.json</li>
+        </ol>
+
+    </ul>
+
+    <ul>Data Sources
+        <ol>
+            <li><a href="http://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml">American FactFinder</a></li>
+            Github:
+            <li><a href="https://github.com/Rmoncayo28/CMPS165/tree/gh-pages/dataSets">Data Sets</a>
+            </li>
+        </ol>
+    </ul>
+
+    <ul>Visualization Sources:
+        <ol>
+            <li><a href="https://bl.ocks.org/mbostock/4122298">U.S. Counties TopoJSON</a></li>
+            <li><a href="https://bl.ocks.org/mbostock/5562380"> California Population Density by Mike Bostock</a>
+            </li>
+            <li><a href="https://github.com/emeeks/d3-svg-legend">d3-svg-legend</a></li>
+            <li><a href="http://bl.ocks.org/mbostock/1087001">Absolute-Positioned Tooltip</a></li>
+            <li><a href="https://bl.ocks.org/mbostock/8fadc5ac9c2a9e7c5ba2">Map Pan & Zoom I</a></li>
+            <li><a href="https://gist.github.com/shawnbot/6518285">Zoom bounded</a></li>
+            <li><a href="http://callmenick.com/post/stylish-css-buttons">Stylish CSS Buttons</a></li>
+            <li><a href="https://bl.ocks.org/mbostock/4573883">Threshold Key</a></li>
+            <li><a href="http://www.cssscript.com/ios-7-style-animated-switch-control-with-javascript-and-css3/">iOS 7 Style Toggle Switch</a></li>
+        </ol>
+    </ul>
+
+    <ul>Members:
+        <ol>Raul Moncayo (rmoncayo@ucsc.edu)</ol>
+        <ol>Jeffrey Guo (jeguo@ucsc.edu)</ol>
+        <ol>Timothy Ma (ttma@ucsc.edu)</ol>
+        <ol>Richard Pham (rwpham@ucsc.edu)</ol>
+    </ul>
+</body>
+
+</html>

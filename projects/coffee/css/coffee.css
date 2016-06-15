@@ -1,0 +1,368 @@
+/* Navbar stuff*/
+
+.navbar-header {
+    width: 100%;
+}
+
+.mainTitle {
+    background-color: #764F1F !important;
+    border: 0 !important;
+    font-family: Montserrat;
+    color: #FFFFFF;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+.mainTitle .titleText {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.mainTitle .titleDetail {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+
+/* Main container */
+    
+.main {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-top: 10em !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    height: 90vh;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.main .bean {
+    width: 8em;
+    height: 9em;
+    padding: 20px 40px 0px 40px;
+}
+
+
+
+.main .roast {
+    width: 70%;
+}
+
+.main .milk {
+    width:8em;
+    height:9em;
+    padding: 40px;
+}
+
+.almond{
+    width:150px;
+    height:180px;
+    padding: 40px 45px 40px 45px;
+}
+
+.main .sweetener {
+    width:8em;
+    height:9em;
+    padding: 40px;
+}
+
+.main .dropdown {
+    margin: 0px;
+    cursor: pointer !important;
+
+}
+
+.main .row {
+    margin: 0 !important;
+}
+
+.dropList {
+    background-color: #FFFFFF !important;
+    height: auto !important;
+    max-height: 90px !important;
+    overflow-x: hidden !important;
+    left: 15px;
+    right: 15px;
+}
+
+.dropdown li:hover {
+    background-color: #DDDDDD !important;
+}
+
+/* Rows and content*/
+.content {
+    padding: 50px 10px 50px 10px;
+}
+
+.itemLabel {
+    margin: -15px auto auto auto;
+}
+
+.titleLabel {
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 20px !important;
+}
+
+.titleDetail {
+    font-size: .8em;
+    font-weight: normal;
+    padding: 0em 3em 0em 3em;
+}
+
+.turkish {
+    margin: auto auto auto -30px;
+}
+
+.siphen{
+    padding: 40px;
+}
+
+.coldbrew{
+    padding: 40px;
+}
+
+.chemex{
+    padding: 55px 40px 45px 40px;
+}
+
+.method {
+    width: 8.5em !important;
+    height: 10em !important;
+    
+}
+
+.image {
+    width:150px;
+    height:180px;
+    padding: 40px;
+}
+
+.cupHolder {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    margin: auto;
+}
+
+.mainCup {
+    width: auto;
+    position: absolute;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.mainFill {
+    height: 0em;
+    position: absolute;
+    pointer-events: none;
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+    transition: 1s -webkit-filter ease-out;
+    z-index: 1;
+
+}
+
+.mainIce {
+    pointer-events: none;
+    opacity: 0;
+    height: 25%;
+    left: 38.7%;
+    top: 2em;
+    position: absolute;
+    z-index: 2;
+}
+
+.compareCup {
+    opacity: 0.2;
+    width: auto;
+    position: absolute;
+    cursor: pointer
+}
+
+.compareFill {
+    opacity: 0.2;
+    height: 0em;
+    position: absolute;
+    pointer-events: none;
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+    transition: 1s -webkit-filter ease-out;
+}
+
+.compareIce {
+    pointer-events: none;
+    opacity: 0;
+    height: 25%;
+    left: 38.7%;
+    top: 2em;
+    position: absolute;
+    z-index: 2;
+}
+
+.hasMilk {
+    -webkit-filter: brightness(125%);
+    filter: brightness(125%);
+}
+
+
+.resultSide {
+    background-color: #CCCCCC;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    padding-top: 15vh;
+    overflow-y: auto;
+}
+
+.compareCupSide {
+    opacity: 0.2;
+}
+
+.mods {
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+}
+
+.buttonRow {
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+}
+
+.modSide {
+    background-color: #CCCCCC;
+    height: 100vh;
+    overflow-y: scroll;
+    width: 100%;
+    padding-top: 15vh;
+}
+
+.resultTitle {
+    padding-top: 20px !important;
+    font-size: 28px;
+}
+
+/* GRAPHS */
+
+.graphs {
+    padding-bottom: 35px!important
+}
+
+.graphData {
+    font-size: 0.8em;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.graphDetail {
+    font-size: 10px;
+    margin-top: -12px !important;
+}
+
+.graphTitle {
+    font-size: 0.75em;
+}
+
+.ct-label {
+    font-size: 14px !important;
+    font-family: Montserrat !important;
+    font-style: bold !important;
+}
+
+
+/* BUTTON */
+
+.btn-light {
+  background-color: #b0742b;
+  border-color: #b0742b;
+  color: white;
+}
+
+.btn-medium{
+  background-color: #764F1F;
+  border-color: #764F1F;
+  color: white;
+}
+
+.btn-dark {
+  background-color: #5c3d16;
+  border-color: #5c3d16;
+  color: white;
+}
+
+.btn-save {
+  background-color: #1FB57B;
+  color: white;
+}
+
+.btn-saved {
+  background-color: #1FB57B;
+  color: white;
+}
+
+
+
+/* TOOLTIP STYLING */
+
+.tipInfo {
+    width: 15em;
+    padding-bottom: 3em;
+    margin-bottom: 1em;
+}
+
+.tipHolder {
+    display: none;
+}
+
+l { 
+    float: left; 
+    text-align: right;
+    width:30%;
+    font-weight: bold;
+}
+
+r { 
+    float: right;
+    text-align: left;
+    width:65%;
+}
+
+
+/* Button Text */
+.btn:hover{ 
+    color: white !important;
+}
+
+.btn:focus{
+    color: white !important;
+}
+
+
+/* Text switcher */
+#swap {
+    vertical-align: top;
+    width: 0;
+    height: 1em;
+ /* needed. px, em or any other */;
+}
+
+#swap > span {
+    position: absolute;
+}
+
+/* INFO BUTTON */
+
+.infoButton {
+    text-align: right;
+    font-size: 1.4em !important;
+    max-height: 1em !important;
+    overflow: visible !important;
+    line-height: .2em !important;
+    position: relative !important;
+    bottom: 0.3em !important;
+    margin: 0;
+    cursor: pointer;
+}

@@ -1,0 +1,144 @@
+/*
+The JSON below represnts is dicided into three main parts, beans, method and roasts.
+All data is fairly straight forward with a few exceptions.
+Price => USD per ounce
+Flavor: Negative => makes the coffe more bitter, Positive => while a postive flavor adds sweetness.
+Size => ounces of coffee per cup
+Calories => calories per ounce
+*/
+var data =
+{
+  "beans": [
+    {
+      "name": "Arabica",
+      "base_caffeine_scalar": 1.0,
+      "bean_flavor": -.025,
+      "bean_price": 0.01278222256
+    },
+    
+    {
+      "name": "Robusta",
+      "base_caffeine_scalar": 1.62,
+      "bean_flavor": -.05,
+      "bean_price": 0.00735272632
+    }
+    
+  ],
+    
+  "methods": [
+    {
+      "name": "Chemex",
+      "caffeine_mg": 145,
+      "size": 8,
+      "calorie_ounce_method": 0.25,
+      "method_flavor": 0.25,
+      "gramsPerCup": 24
+      
+    },
+    {
+      "name": "Siphon",
+      "caffeine_mg": 130,
+      "size": 8,
+      "calorie_ounce_method": 0.25,
+      "method_flavor": 0.25,
+      "gramsPerCup": 24
+    },
+    {
+      "name": "Espresso",
+      "caffeine_mg": 77,
+      "size": 1.5,
+      "calorie_ounce_method": 0.6667,
+      "method_flavor": -0.3,
+      "gramsPerCup": 8
+    },
+    {
+      "name": "ColdBrew",
+      "caffeine_mg": 95,
+      "size": 8,
+      "calorie_ounce_method": 0.125,
+      "method_flavor": 0.3,
+      "gramsPerCup": 53
+    },
+    {
+      "name": "Turkish",
+      "caffeine_mg": 50,
+      "size": 2,
+      "calorie_ounce_method": 9.0,
+      "method_flavor": -0.4,
+      "gramsPerCup": 6
+    }
+    
+  ],
+    
+  "roasts": [
+    {
+      "name": "Light",
+      "caffeine_scalar": 0.06,
+      "roast_flavor": -0.3
+    },
+    {
+      "name": "Medium",
+      "caffeine_scalar": 0,
+      "roast_flavor": -0.1
+    },
+    {
+      "name": "Dark",
+      "caffeine_scalar": -0.04,
+      "roast_flavor": -0.2
+    }
+  ],
+  
+  "milk": [
+    {
+      "name": "CowMilk",
+      "calorie_ounce_milk": 17.5,
+      "milk_flavor": 0.1,
+      "milk_price": 0.04
+    },
+    {
+      "name": "AlmondMilk",
+      "calorie_ounce_milk": 3.75,
+      "milk_flavor": 0.1,
+      "milk_price": 0.08
+    },
+    {
+      "name": "SoyMilk",
+      "calorie_ounce_milk": 12.5,
+      "milk_flavor": 0.1,
+      "milk_price": 0.07
+    },
+    {
+      "name": "NoMilk",
+      "calorie_ounce_milk": 0.0,
+      "milk_flavor": 0,
+      "milk_price": 0
+    }
+  ],
+  
+  "sweetener": [
+    {
+      "name": "Sugar",
+      "calorie_ounce_sweetener": 111,
+      "sweetener_flavor": 0.2,
+      "sweetener_price": 0.06
+    },
+    {
+      "name": "Honey",
+      "calorie_ounce_sweetener": 86,
+      "sweetener_flavor": 0.3,
+      "sweetener_price": 0.37
+    },
+    {
+      "name": "Syrup",
+      "calorie_ounce_sweetener": 74,
+      "sweetener_flavor": 0.3,
+      "sweetener_price": 0.19
+    },
+    {
+      "name": "NoSweet",
+      "calorie_ounce_sweetener": 0,
+      "sweetener_flavor": 0,
+      "sweetener_price": 0.0
+    }
+  ]
+}

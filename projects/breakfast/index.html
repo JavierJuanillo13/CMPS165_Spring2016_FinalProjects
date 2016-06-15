@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <title>Choose Your Breakfast: What The Experts Recommend (CMPS 165 Spring 2016)</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        <link href="src/css/lib/bootstrap.min.css" rel="stylesheet">
+        <link href="src/css/lib/d3.tip.css" rel="stylesheet">
+        <link href="src/css/main.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="content">
+            <h1>Choose Your Breakfast<br><small>What The Experts Recommend</small></h1>
+
+            <p class="well lead">
+                Experts recommend that you consume approximately a quarter of your daily calories for breakfast. The stereotypical American breakfast as popularized by Hollywood (shown below) is surprisingly compliant with government dietary guidelines in terms of calories, but contains excessive quantities of both cholesterol and sodium.
+            </p>
+
+            <div class="clearfix">
+                <div id="menu"></div>
+
+                <div id="plate">
+                    <button class="btn btn-lg btn-link" id="clear_plate" type="button">Clear Plate</button>
+                </div>
+            </div>
+
+            <div id="form">
+                <form class="row">
+                    <div class="col-xs-2">
+                        <div class="input-group">
+                            <span class="input-group-addon">Age</span>
+                            <input class="form-control input-lg" id="age" min="1" max="150" name="age" step="1" type="number" value="25">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-2">
+                        <div class="input-group">
+                            <span class="input-group-addon">Weight (lb)</span>
+                            <input class="form-control input-lg" id="weight" min="1" max="1000" name="weight" step="1" type="number" value="166">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-2">
+                        <div class="input-group">
+                            <span class="input-group-addon">Height (in)</span>
+                            <input class="form-control input-lg" id="height" min="0" max="11" name="height" step="1" type="number" value="70">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-2">
+                        <div class="input-group">
+                            <span class="input-group-addon">Sex</span>
+                            <div class="form-control input-lg">
+                                <select id="sex" name="sex">
+                                    <option value=""></option>
+                                    <option value="m" selected>Male</option>
+                                    <option value="f">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">Activity Level</span>
+                            <div class="form-control input-lg">
+                                <select id="activity_level" name="activity_level">
+                                    <option value=""></option>
+                                    <option value="sedentary" selected>Sedentary</option>
+                                    <option value="lightly_active">Lightly Active</option>
+                                    <option value="moderately_active">Moderately Active</option>
+                                    <option value="very_active">Very Active</option>
+                                    <option value="extra_active">Extra Active</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div id="nutrients">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Calories</th>
+                            <th>Cholesterol (mg)</th>
+                            <th>Sodium (mg)</th>
+                            <th>Fat (g)</th>
+                            <th>Carbohydrates (g)</th>
+                            <th>Sugar (g)</th>
+                            <th>Protein (g)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Your Plate</td>
+                            <td id="your_plate_calories">0.00</td>
+                            <td id="your_plate_cholesterol">0.00</td>
+                            <td id="your_plate_sodium">0.00</td>
+                            <td id="your_plate_fat">0.00</td>
+                            <td id="your_plate_carbohydrates">0.00</td>
+                            <td id="your_plate_sugar">0.00</td>
+                            <td id="your_plate_protein">0.00</td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="http://health.gov/dietaryguidelines/2010/" target="_blank">U.S. HHS Dietary Guideline</a></td>
+                            <td id="recommendation_calories">0.00</td>
+                            <td id="recommendation_cholesterol">0.00</td>
+                            <td id="recommendation_sodium">0.00</td>
+                            <td id="recommendation_fat">0.00</td>
+                            <td id="recommendation_carbohydrates">0.00</td>
+                            <td id="recommendation_sugar">0.00</td>
+                            <td id="recommendation_protein">0.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="about">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <h2>CMPS 165 Spring 2016<br><small>Data Programming for Visualization</small></h2>
+
+                        <ul>
+                            <li class="da">Scott D</li>
+                            <li>Shaun M</li>
+                            <li class="th">Ryan T</li>
+                            <li>Suresh Lodha</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-8">
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" data-toggle="collapse" data-target="#collapse-files">
+                                    <h4 class="panel-title">Files</h4>
+                                </div>
+
+                                <div class="panel-collapse collapse" id="collapse-files">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">index.html</li>
+
+                                        <li class="list-group-item">src/css/lib/bootstrap.min.css</li>
+                                        <li class="list-group-item">src/css/lib/d3.tip.css</li>
+                                        <li class="list-group-item">src/css/main.css</li>
+
+                                        <li class="list-group-item">src/img/*/*.png</li>
+                                        <li class="list-group-item">src/img/plate.svg</li>
+
+                                        <li class="list-group-item">src/js/lib/bootstrap.min.js</li>
+                                        <li class="list-group-item">src/js/lib/d3.tip.js</li>
+                                        <li class="list-group-item">src/js/lib/d3.v3.min.js</li>
+                                        <li class="list-group-item">src/js/lib/jquery.min.js</li>
+                                        <li class="list-group-item">src/js/main.js</li>
+
+                                        <li class="list-group-item">src/json/foods.json</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" data-toggle="collapse" data-target="#collapse-data-sources">
+                                    <h4 class="panel-title">Data Sources</h4>
+                                </div>
+
+                                <div class="panel-collapse collapse" id="collapse-data-sources">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><a href="https://ndb.nal.usda.gov/ndb/foods" target="_blank">United States Department of Agriculture National Nutrient Database</a></li>
+                                        <li class="list-group-item"><a href="http://health.gov/dietaryguidelines/2010/" target="_blank">United States Department of Health and Human Services 2010 Dietary Guidelines for Americans</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" data-toggle="collapse" data-target="#collapse-code-sources">
+                                    <h4 class="panel-title">Code Sources</h4>
+                                </div>
+
+                                <div class="panel-collapse collapse" id="collapse-code-sources">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><a href="https://github.com/mbostock/d3/wiki/API-Reference" target="_blank">D3 API Reference</a></li>
+                                        <li class="list-group-item"><a href="http://chimera.labs.oreilly.com/books/1230000000345/index.html" target="_blank">Interactive Data Visualization for the Web</a></li>
+                                        <li class="list-group-item"><a href="https://getbootstrap.com/" target="_blank">Bootstrap: The world&apos;s most popular mobile-first and responsive front-end framework</a></li>
+                                        <li class="list-group-item"><a href="http://labratrevenge.com/d3-tip/" target="_blank">d3.tip: Tooltips for d3.js visualizations</a></li>
+                                        <li class="list-group-item"><a href="https://bl.ocks.org/mbostock/1095795" target="_blank">Modifying a Force Layout</a></li>
+                                        <li class="list-group-item"><a href="https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation" target="_blank">Harris-Benedict equation</a></li>
+                                        <li class="list-group-item"><a href="http://www.freepik.com/" target="_blank">Icons designed by Freepik</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" data-toggle="collapse" data-target="#collapse-visualization-sources">
+                                    <h4 class="panel-title">Visualization Sources</h4>
+                                </div>
+
+                                <div class="panel-collapse collapse" id="collapse-visualization-sources">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><a href="https://github.com/ryanbrounley/d3.js_projects/tree/master/foods" target="_blank">How Many Calories are in your Breakfast?</a></li>
+                                        <li class="list-group-item"><a href="http://sureshlodha.github.io/FruitsAndVegetables/" target="_blank">Inside Fruits and Vegetables</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="src/js/lib/d3.v3.min.js"></script>
+        <script src="src/js/lib/d3.tip.js"></script>
+        <script src="src/js/lib/jquery.min.js"></script>
+        <script src="src/js/lib/bootstrap.min.js"></script>
+        <script src="src/js/main.js"></script>
+    </body>
+</html>

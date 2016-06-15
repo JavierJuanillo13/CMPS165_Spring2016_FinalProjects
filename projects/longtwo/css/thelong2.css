@@ -1,0 +1,42 @@
+body {
+	background-color: #faf7f3;
+}
+
+.axis line, .axis text, .axis path{
+    /*display: none;*/
+    /*stroke: #000;*/
+    /*stroke-width: 1px black;*/
+}
+
+#radios{
+	padding: 5px;
+}
+
+.year{
+	margin-left: 10px;
+}
+
+.container{
+	width: 98% !important;
+}
+
+
+.bar text {
+	fill: white;
+}
+
+
+.d3-tip {
+	font-family: "Roboto";
+	position: center;
+	text-align: center;
+	font-size: 17px;
+	color: black;
+	border-radius: 10px;
+	pointer-events: none;
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+	background-color: #377eb8 !important;
+	border: #377eb8 !important;
+}

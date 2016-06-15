@@ -1,0 +1,102 @@
+body {
+  font: 11px sans-serif;
+  background-color: gainsboro;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.dot {
+  stroke: blue;
+    fill: blue;
+}
+.line {
+  /*stroke: #bbb;
+  facebook blue = #3b5998*/
+  stroke: blue;
+  fill: blue;
+}
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+.container{
+  position: relative;
+}
+.miniGraph1{
+ display:inline-block; 
+position: absolute;
+top: 450;
+left: -25;
+
+}
+.miniGraph2{
+ display:inline-block; 
+position: absolute;
+top: 450;
+left: 200;
+}.miniGraph3{
+  display:inline-block;
+position: absolute;
+    top: 450;
+    left: 425;
+
+}.miniGraph4{
+  display:inline-block;
+    position: absolute;
+    top: 450;
+    left: 650;
+}
+
+.miniGraph1 .y .tick {
+    display: none;
+}.miniGraph2 .y .tick {
+    display: none;
+}.miniGraph3 .y .tick {
+    display: none;
+}.miniGraph4 .y .tick {
+    display: none;
+}
+.svg { 
+  background-color: antiquewhite;
+}
+.hover-line { 
+  stroke: black;  
+  stroke-width: .8px;
+}
+
+.axis path, .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+  }
+  path.line {
+      fill: none;
+      stroke-width: 1px;
+  }
+.group1.line {
+    stroke: blue;  
+    fill:blue;
+}
+#optionNight  {
+    position: absolute;
+    top: 600;
+    left: -40;
+}
+
+#optionMorning {
+    position: absolute;
+    top: 550;
+    left: -40;
+}
+
+#optionPower {
+    position: absolute;
+    top: 650;
+    left: -40;
+}
+

@@ -1,0 +1,16 @@
+name,parent,finish,wins,ties,losses,goalsfor,goalsagainst,crest
+wEngland,null,Champions,5,1,1,11,3,england.jpg
+fEngland,wEngland,Champions,5,1,1,11,3,england.jpg
+fWest Germany,wEngland,Runners up,4,1,1,15,4,germany_west.jpg
+sPortugal,fEngland,Semi-finals,5,0,1,17,8,portugal.jpg
+sEngland,fEngland,Champions,5,1,1,11,3,england.jpg
+sWest Germany,fWest Germany,Runners up,4,1,1,15,4,germany_west.jpg
+sSoviet Union,fWest Germany,Semi-finals,4,0,2,7,6,soviet_union.jpg
+qWest Germany,sWest Germany,Runners up,4,1,1,15,4,germany_west.jpg
+qUruguay,sWest Germany,Quarter-finals,2,1,2,7,3,uruguay.jpg
+qNorth Korea,sPortugal,Quarter-finals,1,1,2,5,9,north_korea.jpg
+qPortugal,sPortugal,Semi-finals,5,0,1,17,8,portugal.jpg
+qSoviet Union,sSoviet Union,Semi-finals,4,0,2,7,6,soviet_union.jpg
+qHungary,sSoviet Union,Quarter-finals,2,0,2,8,7,hungary.jpg
+qArgentina,sEngland,Quarter-finals,2,1,1,4,2,argentina.jpg
+qEngland,sEngland,Champions,5,1,1,11,3,england.jpg

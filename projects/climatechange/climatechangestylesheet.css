@@ -1,0 +1,64 @@
+@import url(../style.css?aea6f0a);
+/*lol test*/
+/*l00l*/
+
+#chart {
+  margin-left: -0px;
+  height: 506px;
+}
+
+#outer{
+    width:100%;
+    text-align: center;
+}
+.inner{
+    display: inline-block;
+}
+
+text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pagetext{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dot {
+  stroke: #000;
+  opacity: 0.7;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.label {
+  fill: #777;
+}
+
+.year.label {
+  font: 500 140px "Garamond";
+  fill: #ddd;
+}
+
+.year.label.active {
+  fill: #ddd;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+  cursor: ew-resize;
+}
+
+.selectbutton{
+    background-color: #87CEEB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
