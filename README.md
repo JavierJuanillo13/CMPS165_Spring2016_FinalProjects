@@ -1,2 +1,2 @@
-# CMPS165_Spring16
-CMPS 165 Spring 2016
+# Data Programming for Visualization Projects Spring16
+Data Programming for Visualization Projects Spring 2016
