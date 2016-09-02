@@ -1,0 +1,171 @@
+html, body {
+    background-color: #ffffff;
+	padding:0px;
+	margin:0px;
+}
+	
+.country {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: .5px;
+    stroke-linejoin: round;
+}
+
+.graticule {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .3;
+    stroke-width: .5px;
+}
+
+.graticule.outline {
+    stroke: #333;
+    stroke-opacity: 1;
+    stroke-width: 1.5px;
+}
+	
+div.tooltip {	
+    position: absolute;
+    width: 190px;
+    height: auto;
+    padding: 10px;
+    font-size: 12px;
+	font-family: "Trebuchet MS";
+    background-color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;		
+}
+    
+.legend {
+  font-size: 12px;
+}
+
+.grey { fill:rgb(160,160,160); }
+
+.check {
+    background-color: #eee;
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
+    linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+    background-size:60px 60px;
+    background-position:0 0, 30px 30px
+}
+    
+.q0-9 { fill:#F7FBFF; }
+.q1-9 { fill:#DEEBF7; }
+.q2-9 { fill:#C6DBEF; }
+.q3-9 { fill:#9ECAE1; }
+.q4-9 { fill:#6BAED6; }
+.q5-9 { fill:#4292C6; }
+.q6-9 { fill:#2171B5; }
+.q7-9 { fill:#08519C; }
+.q8-9 { fill:#08306B; }
+
+.o0-9 { fill:#f7fcf5; }
+.o1-9 { fill:#e5f5e0; }
+.o2-9 { fill:#c7e9c0; }
+.o3-9 { fill:#a1d99b; }
+.o4-9 { fill:#74c476; }
+.o5-9 { fill:#41ab5d; }
+.o6-9 { fill:#238b45; }
+.o7-9 { fill:#006d2c; }
+.o8-9 { fill:#00441b; }
+
+.m0-9 { fill:#fff7fb; }
+.m1-9 { fill:#ece2f0; }
+.m2-9 { fill:#d0d1e6; }
+.m3-9 { fill:#a6bddb; }
+.m4-9 { fill:#67a9cf; }
+.m5-9 { fill:#3690c0; }
+.m6-9 { fill:#02818a; }
+.m7-9 { fill:#016c59; }
+.m8-9 { fill:#014636; }
+
+.r0-9 { fill:#fff7ec; }
+.r1-9 { fill:#fee8c8; }
+.r2-9 { fill:#fdd49e; }
+.r3-9 { fill:#fdbb84; }
+.r4-9 { fill:#fc8d59; }
+.r5-9 { fill:#ef6548; }
+.r6-9 { fill:#d7301f; }
+.r7-9 { fill:#b30000; }
+.r8-9 { fill:#7f0000; }
+
+.b0-9 { fill:#ffffe5; }
+.b1-9 { fill:#fff7bc; }
+.b2-9 { fill:#fee391; }
+.b3-9 { fill:#fec44f; }
+.b4-9 { fill:#fe9929; }
+.b5-9 { fill:#ec7014; }
+.b6-9 { fill:#cc4c02; }
+.b7-9 { fill:#993404; }
+.b8-9 { fill:#662506; }
+
+.p0-9 { fill:#fff7f3; }
+.p1-9 { fill:#fde0dd; }
+.p2-9 { fill:#fcc5c0; }
+.p3-9 { fill:#fa9fb5; }
+.p4-9 { fill:#f768a1; }
+.p5-9 { fill:#dd3497; }
+.p6-9 { fill:#ae017e; }
+.p7-9 { fill:#7a0177; }
+.p8-9 { fill:#49006a; }
+
+
+.StatButton {
+	height: 63px;
+	width: 200px;
+	background: #dddddd;
+	border:1px solid #000000;
+    border-left-style: none;
+	border-right-style: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:arial;
+	font-size:15px;
+}
+
+.StatButton:hover {
+  background: #f8f8f8;
+  text-decoration: none;
+}
+
+table {border-collapse: collapse;}
+td    {padding: 0px;}
+
+	area1 {	
+		float:right;
+	}
+
+	area2 {
+		background-color:black;
+		float:right;
+	}
+
+
+header, .full-width {
+  width: 100%;
+  height: 100px;
+	margin:0;
+	margin-bottom: 0px;
+  background:#3f2a14;
+	  padding: 0.25em 0.625em;
+
+}
+.wrap {
+  width: 80%;
+  max-width: 24em;
+  margin: 0 auto;
+  padding: 0.25em 0.625em;
+	text-align:center; 
+	font-size: 48px;
+	color:steelblue; 
+	font-family:verdana; 
+}
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
