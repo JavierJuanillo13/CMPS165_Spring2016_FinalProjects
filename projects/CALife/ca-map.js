@@ -1,4 +1,4 @@
-//incrementColor function obtained from http://stackoverflow.com/questions/12934720/how-to-increment-decrement-hex-color-values-with-javascript-jquery/15776973#15776973   
+//incrementColor function obtained from https://stackoverflow.com/questions/12934720/how-to-increment-decrement-hex-color-values-with-javascript-jquery/15776973#15776973   
 var incrementColor = function (color, step) {
     var colorToInt = parseInt(color.substr(1), 16), // Convert HEX color to integer
         nstep = parseInt(step); // Convert step to integer
